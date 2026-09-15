@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qip28"]
-size = Vector2(11, 17)
+size = Vector2(11, 14)
 
 [node name="PlayerKnight" type="CharacterBody2D" unique_id=2069769698]
 
@@ -52,5 +52,5 @@ frame = 3
 frame_progress = 0.86336446
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1182819131]
-position = Vector2(-0.5, -8.5)
+position = Vector2(-0.5, -7)
 shape = SubResource("RectangleShape2D_qip28")
