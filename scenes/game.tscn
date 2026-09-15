@@ -1,12 +1,28 @@
 [gd_scene format=3 uid="uid://detvgc70urbu2"]
 
 [ext_resource type="PackedScene" uid="uid://cefr7m8pqg5ei" path="res://scenes/player_knight.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://d1os687ps4qnf" path="res://scripts/player_movement.gd" id="2_yqjtg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qip28"]
 
 [node name="Game" type="Node2D" unique_id=1309745172]
 
 [node name="PlayerKnight" parent="." unique_id=2069769698 instance=ExtResource("1_uwrxv")]
-position = Vector2(6, 0)
+position = Vector2(-44, -69)
+script = ExtResource("2_yqjtg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=689648288]
 position = Vector2(25, -18)
 zoom = Vector2(4.4, 4.4)
+
+[node name="Base Floor" type="StaticBody2D" parent="." unique_id=951965762]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base Floor" unique_id=1835486536]
+shape = SubResource("WorldBoundaryShape2D_qip28")
+
+[node name="Base Left Boundry" type="StaticBody2D" parent="." unique_id=1547787142]
+position = Vector2(-108, -19)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base Left Boundry" unique_id=353499799]
+shape = SubResource("WorldBoundaryShape2D_qip28")
