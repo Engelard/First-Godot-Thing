@@ -1,0 +1,10 @@
+extends Area2D
+
+
+
+
+func _on_body_entered(body: Node2D) -> void:
+	print("YOU DEAD!")
+	get_tree().reload_current_scene()
+	
+	
